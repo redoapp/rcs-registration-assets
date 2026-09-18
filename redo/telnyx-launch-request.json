@@ -1,0 +1,47 @@
+{
+  "campaign": {
+    "company_overview": "Redo Tech, Inc. builds an e-commerce platform for Shopify merchants: returns, order tracking, customer support, and AI-driven SMS and RCS marketing (Recover and Commerce Agent).",
+    "agent_overview": "The Redo agent messages merchants who have enabled operational text messages in their Redo account (onboarding step or Settings, behind login). It sends reports on store activity, account and integration alerts, security notices, and answers support questions in-thread with handoff to a person on request. It does not send marketing. Every message offers HELP and STOP.",
+    "interactions": [
+      {
+        "interaction_type": "TRANSACTIONAL_UPDATES",
+        "description": "Scheduled reports on store activity (returns, recovered orders, support volume), sent when a report the merchant enabled is ready."
+      },
+      {
+        "interaction_type": "ACCOUNT_ALERTS",
+        "description": "Integration, billing, and security alerts for the merchant's Redo account, sent when the event occurs."
+      },
+      {
+        "interaction_type": "CUSTOMER_SUPPORT",
+        "description": "Answers to merchant questions about their Redo account and setup, with handoff to a person on request."
+      },
+      {
+        "interaction_type": "TWO_WAY_CONVERSATION",
+        "description": "Merchants reply in-thread and the agent responds, including via suggested-reply chips."
+      }
+    ],
+    "message_examples": [
+      "Hi Sarah, it's Redo. Your Recover report for yesterday is ready: 42 conversations, 9 orders recovered, $3,180 in revenue. Reply here with any questions.",
+      "Redo alert: your Shopify connection for Sarah's Boutique was disconnected at 8:12 AM MT. Returns and order tracking are paused until it's reconnected.",
+      "That explains it. Reinstall Redo from the Shopify App Store and your settings restore automatically. Want a person to confirm once it's reconnected?"
+    ],
+    "consent_settings": {
+      "opt_in_methods": [
+        {
+          "method_type": "WEBSITE"
+        }
+      ],
+      "call_to_action": "By checking this box, you agree to receive recurring automated text messages about interactions and reports from Redo. Consent is not a condition of using Redo. Msg & data rates may apply. Msg frequency varies. Email support@getredo.com for support, or reply HELP for help and STOP to cancel. View Redo SMS Terms and Privacy Policy. We will not share your mobile information with third parties for marketing or promotional purposes.",
+      "call_to_action_url": "https://app.getredo.com",
+      "call_to_action_media_url": "https://redoapp.github.io/rcs-registration-assets/redo/redo-app-opt-in.png",
+      "double_opt_in": false,
+      "opt_in_message": "You're subscribed to Redo reporting and operational texts. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out or HELP for help.",
+      "help_response": "Redo Support: email support@getredo.com or visit https://redo.com. Reply STOP to opt out. Msg & data rates may apply.",
+      "opt_out_response": "You have been unsubscribed from Redo messages and will receive no further messages. Reply START to subscribe again."
+    }
+  },
+  "testing": {
+    "test_url": "https://redoapp.github.io/rcs-registration-assets/redo/redo-rcs-preview.mp4",
+    "additional_information": "Opt-in is inside the Redo merchant app (behind login): an onboarding step and a Settings page where the merchant enters a phone number and checks the operational-texts box; the screenshot shows that step with the box unchecked. Video opens with the opt-in confirmation, then a report, an account alert with suggested replies the merchant taps, a merchant question with the agent's reply, HELP and its response, STOP and its response, and START."
+  }
+}
